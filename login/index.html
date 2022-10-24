@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Log In</h1>
+        <form name="login">
+        <label for="username" class="lab" >Email</label>
+        <input type="text" name="username" id="username" class="field" pattern="[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z.]+" required title="Enter a valid email address.">
+        <label for="password" class="lab">Password</label>
+        <input type="password" name="password" required id="password" class="field">
+        <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <div class="description">
+        *Note: This is a sample log-in page that rejects for invalid 
+        email and passwords. Do checkout how the color of field changes
+        as per the validity of the data entered.
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
