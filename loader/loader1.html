@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader 1</title>
+    <style>
+        .container
+        {
+            /* outline:1px solid; */
+            display: flex;
+            width: 300px;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .items
+        {
+            /* outline:.5px solid red; */
+            background-color: rgba(83, 5, 252, 0.93);
+            /* background-color: black; */
+            height: 100px;
+            width: 100px;
+            transform: scale(0.8);
+            margin: 0px;
+
+        }
+        #item7
+        {
+            animation: scale 1.1s ease-in-out infinite;
+
+        }
+        #item4,#item8
+        {
+            animation: scale 1.1s .25s ease-in-out infinite;
+
+
+        }
+        #item1,#item5,#item9
+        {
+            animation: scale 1.1s .50s ease-in-out infinite;
+
+        }
+        #item2,#item6
+        {
+            animation: scale 1.1s .75s ease-in-out infinite;
+
+        }
+        #item3
+        {
+            animation: scale 1.1s 1s ease-in-out infinite;
+
+        }
+        @keyframes scale {
+            50%{
+                transform: scale(1.1);
+                filter: hue-rotate(30deg) blur(5px);
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="item1"></div>
+        <div class="items" id="item2"></div>
+        <div class="items" id="item3"></div>
+        <div class="items" id="item4"></div>
+        <div class="items" id="item5"></div>
+        <div class="items" id="item6"></div>
+        <div class="items" id="item7"></div>
+        <div class="items" id="item8"></div>
+        <div class="items" id="item9"></div>
+    </div>
+    <button onclick="f1()">Change theme</button>
+    <script>
+let a=document.getElementsByClassName('items');
+let b=true;
+function f1()
+{
+    if(b)
+    {
+        for(i=0;i<a.length;i++)
+        {
+            a[i].style.backgroundColor="black";
+        }
+        b=false;
+    }
+    else
+    {
+        for(i=0;i<a.length;i++)
+        {
+            a[i].style.backgroundColor="rgba(83, 5, 252, 0.93)";
+        }
+        b=true;
+    }
+}
+    </script>
+</body>
+</html>

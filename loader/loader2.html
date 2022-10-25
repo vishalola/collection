@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader 2 </title>
+    <style>
+        .container
+        {
+            /* outline: 1px solid; */
+            margin: auto;
+            margin-top: 100px;
+            height: 300px;
+            width: 300px;
+            animation: rotate 1s linear infinite;
+
+        }
+        .half
+        {
+            background-color: blueviolet;
+            height: 300px;
+            width: 150px;
+            border-top-left-radius: 400px;
+            border-bottom-left-radius: 400px;
+        }
+        .innerhalf
+        {
+            position: relative;
+            height: 200px;
+            background-color: white;
+            width: 200px;
+            border-radius: 100%;
+            top:-250px;
+            left:50px;
+
+        }
+        .up
+        {   
+            /* outline: .5px solid; */
+            background-color: blueviolet;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            position: relative;
+            left: 125px;
+        }
+        .blur
+        {
+            /* outline: 1px solid; */
+            height: 140px;
+            width: 160px;
+            position: relative;
+            top:-340px;
+            left: -10px;
+            background-image: linear-gradient(130deg,transparent 40px,white 170px);
+            /* background-color: black; */
+        }
+
+        @keyframes rotate {
+            100%{
+                transform:rotate(360deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="half">
+            <div class="up"></div>
+        </div>
+        <div class="innerhalf"></div>
+        <div class="blur">
+        </div>
+    </div>
+</body>
+</html>
