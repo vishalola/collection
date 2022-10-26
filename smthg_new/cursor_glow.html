@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practices
+    </title>
+    <style>
+        body
+        {
+            margin: 0px;
+        }
+        .box
+        {
+            /* margin: auto; */
+            margin-top: 00px;
+            height: 400px;
+            width: 400px;
+            /* color: white; */
+            font-size: 50px;
+            cursor:pointer;
+            background-image: radial-gradient(at -200px 0px,cyan -300px,black 200px);
+            /* background-position: -150px -150px; */
+        }
+        p
+        {
+            text-align: center;
+            border:2px dotted ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">peek-a-boo</div>
+    <p >*Note: Hover the cursor over above black box
+        and do checkout the JS code. Simple, yet amazing!
+        <br>Cursor location is traced in the above box and background
+        is set to radial gradient, it's position is set as per the 
+        mouse's coordinates.
+    </p>
+    <script>
+        let a=document.querySelector(".box");
+        a.onmousemove=()=>{
+            let x=event.clientX;
+            let y=event.clientY;
+            a.style.backgroundImage="radial-gradient(at "+x+"px "+y+"px,cyan -300px,black 200px)";
+        }
+        a.onmouseleave=()=>{
+            a.style.background="black";
+
+        }
+    </script>
+</body>
+</html>
